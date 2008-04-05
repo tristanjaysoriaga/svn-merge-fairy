@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Installation instructions for the Merge Fairy.
 #labels Featured
 
 = Introduction =
@@ -16,7 +16,7 @@ merge, resuming automated merging once this done.
 I originally wrote the Merge Fairy at Jobster, where it has been used
 for the past few years. We also use it at Mergelab.
 
-
+Follow the steps below to configure the Merge Fairy.
 
 = Details =
 
