@@ -38,21 +38,21 @@ The branches subsection lists each of the branches that the Merge fairy
 should know about.  The initial values of lastBuildVersion and
 lastSyncVersion should be the most recent revisions in the
 branch. For example:
-
+{{{
         <branch url="server/branches/2008_03_04_attribution" path="server/branches/200\
 8_03_04_attribution" buildSucceeded="true" lastBuildVersion="1328" lastSyncVersion="13\
 28" />
-
+}}}
 The dependencies subsection describes relationships between branches.
 For example, the trunk branch below should have changes automatically
 merged from the attribution branch.  Set lastGoodMerge initially to
 the most revision in the baseBranch.
-
+{{{
         <dependency
             baseBranch="server/branches/attribution"
             dependentBranch="server/trunk"
             lastGoodMerge="1328" />
-
+}}}
 You will need to edit fairy.xml and restart the daemon whenever you add new branches that should be managed by the fairy.
 
 === Configure fairyconfig.py ===
@@ -82,10 +82,10 @@ automated merging between those branches until this is done.
 There are two directives that can be embedded in checkin mail to
 communicate with the fairy.
 
-MERGES 1001 says that this checkin manually merges revision 1001; you
+*MERGES 1001* says that this checkin manually merges revision 1001; you
 should use this directive as instructed when the automatic merge
 fails.
 
-NOFAIRY (all caps) says that the Merge Fairy should not attempt to
+*NOFAIRY* says that the Merge Fairy should not attempt to
 merge this checkin to any derived branches.  Use this (for example)
 when backporting a change from a derived branch to the base branch.
